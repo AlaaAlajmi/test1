@@ -19,3 +19,10 @@ export const createMetaTag = (property, content) => {
   meta.setAttribute('content', content);
   return meta;
 };
+
+export const createLinkTag = (rel, href) => {
+  const link = document.createElement('link');
+  link.setAttribute('rel', rel);
+  link.setAttribute('href', href);
+  return link;
+};

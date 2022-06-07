@@ -1,7 +1,6 @@
-import { DEFAULT_VERSION, createMetaTag } from '../helpers';
+import { createLinkTag, createMetaTag } from "../../helpers";
 
-export default {
-  mounted() {
+export default function injectInHead() {
     const head = document.head;
 
     head.appendChild(createMetaTag('article:tag', this.$page.title));
@@ -23,5 +22,6 @@ export default {
         head.appendChild(createMetaTag('robot', 'noindex'));
       }
     }
-  }
-};
+
+    head.appendChild(createLinkTag('canonical', ));
+}
